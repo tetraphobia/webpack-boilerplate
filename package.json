@@ -1,8 +1,8 @@
 {
-    "name": "webdev-boilerplate",
+    "name": "webpack-boilerplate",
     "version": "0.0.1",
-    "description": "A template to quickly get started on frontend web development",
-    "repository": "https://github.com/tetraphobia/webdev-boilerplate",
+    "description": "A boilerplate to quickly get started developing with Webpack.",
+    "repository": "https://github.com/tetraphobia/webpack-boilerplate",
     "author": "Jacob A. Teddy",
     "license": "MIT",
     "private": false,
