@@ -28,13 +28,13 @@ const production: Configuration = {
             filename: 'styles/[contenthash].css',
         }),
     ],
-    // optimization: {
-    //     minimize: true,
-    //     minimizer: [new CssMinimizerPlugin(), '...'],
-    //     runtimeChunk: {
-    //         name: 'runtime',
-    //     },
-    // },
+    optimization: {
+        minimize: true,
+        minimizer: [new CssMinimizerPlugin(), '...'],
+        runtimeChunk: {
+            name: 'runtime',
+        },
+    },
     performance: {
         hints: false,
         maxEntrypointSize: 512000,
