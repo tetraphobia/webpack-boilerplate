@@ -1,4 +1,4 @@
-import { paths } from './config/paths'
+import { paths } from './paths'
 import common from './webpack.common'
 import merge from 'webpack-merge'
 
@@ -26,7 +26,7 @@ const dev: Configuration = {
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.s?css$/i,
                 use: [
                     'style-loader',
                     'css-loader',

@@ -1,4 +1,4 @@
-import { paths } from './config/paths'
+import { paths } from './paths'
 import common from './webpack.common'
 import merge from 'webpack-merge'
 
@@ -18,7 +18,7 @@ const production: Configuration = {
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.s?css$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',

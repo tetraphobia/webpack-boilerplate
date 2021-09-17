@@ -1,4 +1,4 @@
-import { paths } from './config/paths'
+import { paths } from './paths'
 
 import CopyPlugin from 'copy-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
@@ -34,7 +34,7 @@ const common: Configuration = {
             patterns: [
                 {
                     from: paths.pub,
-                    to: 'assets',
+                    to: './',
                     globOptions: {
                         ignore: ['*.DS_Store'],
                     },
