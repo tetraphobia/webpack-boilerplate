@@ -13,7 +13,7 @@ const production: Configuration = {
     output: {
         path: paths.build,
         publicPath: './',
-        filename: 'js/[contenthash].bundle.js',
+        filename: 'js/[contenthash].js',
     },
     module: {
         rules: [
