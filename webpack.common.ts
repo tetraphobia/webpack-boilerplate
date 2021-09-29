@@ -2,7 +2,7 @@ import { paths } from './paths'
 
 import CopyPlugin from 'copy-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import PrettierPlugin from 'prettier-webpack-plugin'
+// import PrettierPlugin from 'prettier-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 import { Configuration } from 'webpack'
@@ -17,6 +17,10 @@ const common: Configuration = {
                 exclude: /node_modules/,
             },
         ],
+    },
+    resolve: {
+        modules: [paths.src, 'node_modules/'],
+        extensions: ['', '.js', '.ts']
     },
     output: {
         path: paths.build,
@@ -42,7 +46,7 @@ const common: Configuration = {
                 },
             ],
         }),
-        new PrettierPlugin(),
+        // new PrettierPlugin(),
     ],
 }
 
