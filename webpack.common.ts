@@ -33,6 +33,7 @@ const common: Configuration = {
         new HtmlWebpackPlugin({
             template: `${paths.src}/html/index.html`,
             filename: 'index.html',
+            title: 'Webpack Boilerplate',
         }),
         new CopyPlugin({
             patterns: [
