@@ -20,7 +20,7 @@ const common: Configuration = {
     },
     resolve: {
         modules: [paths.src, 'node_modules/'],
-        extensions: ['', '.js', '.ts']
+        extensions: ['', '.js', '.ts'],
     },
     output: {
         path: paths.build,
