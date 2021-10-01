@@ -1,4 +1,4 @@
-import { paths } from './paths'
+import { Paths } from './paths.config'
 
 import CopyPlugin from 'copy-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
@@ -7,8 +7,8 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 import { Configuration } from 'webpack'
 
-const common: Configuration = {
-  entry: [`${paths.src}/index.ts`],
+export const Common: Configuration = {
+  entry: [`${Paths.src}/index.ts`],
   module: {
     rules: [
       {
@@ -19,11 +19,11 @@ const common: Configuration = {
     ]
   },
   resolve: {
-    modules: [paths.src, 'node_modules/'],
+    modules: [Paths.src, '../node_modules/'],
     extensions: ['', '.js', '.ts']
   },
   output: {
-    path: paths.build,
+    path: Paths.build,
     filename: 'bundle.js',
     publicPath: '/'
   },
@@ -31,14 +31,14 @@ const common: Configuration = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: `${paths.src}/html/index.html`,
+      template: `${Paths.src}/html/index.html`,
       filename: 'index.html',
       title: 'Webpack Boilerplate'
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: paths.pub,
+          from: Paths.pub,
           to: './',
           globOptions: {
             ignore: ['*.DS_Store']
@@ -50,5 +50,3 @@ const common: Configuration = {
     // new PrettierPlugin(),
   ]
 }
-
-export default common

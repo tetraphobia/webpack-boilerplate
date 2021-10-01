@@ -1,5 +1,7 @@
-import { paths } from './paths'
-import common from './webpack.common'
+// noinspection JSUnusedGlobalSymbols
+
+import { Paths } from './paths.config'
+import { Common } from './webpack.common'
 import merge from 'webpack-merge'
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -11,7 +13,7 @@ const production: Configuration = {
   mode: 'production',
   devtool: false,
   output: {
-    path: paths.build,
+    path: Paths.build,
     publicPath: './',
     filename: 'js/[contenthash].js'
   },
@@ -22,7 +24,6 @@ const production: Configuration = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'postcss-loader',
           'sass-loader'
         ]
       }
@@ -46,5 +47,4 @@ const production: Configuration = {
     maxAssetSize: 512000
   }
 }
-
-export default merge(common, production)
+module.exports = merge(Common, production)

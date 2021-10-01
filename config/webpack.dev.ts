@@ -1,5 +1,7 @@
-import { paths } from './paths'
-import common from './webpack.common'
+// noinspection JSUnusedGlobalSymbols
+
+import { Paths } from './paths.config'
+import { Common } from './webpack.common'
 import merge from 'webpack-merge'
 
 import { Configuration as WebpackConfiguration } from 'webpack'
@@ -14,9 +16,9 @@ const dev: Configuration = {
   devtool: 'inline-source-map',
   devServer: {
     static: {
-      directory: paths.pub
+      directory: Paths.pub
     },
-    watchFiles: [`${paths.src}/**/*`, `${paths.pub}/**/*`],
+    watchFiles: [`${Paths.src}/**/*`, `${Paths.pub}/**/*`],
     historyApiFallback: true,
     open: true,
     compress: true,
@@ -30,7 +32,6 @@ const dev: Configuration = {
         use: [
           'style-loader',
           'css-loader',
-          'postcss-loader',
           'sass-loader'
         ]
       }
@@ -38,4 +39,4 @@ const dev: Configuration = {
   }
 }
 
-export default merge(common, dev)
+module.exports = merge(Common, dev)
