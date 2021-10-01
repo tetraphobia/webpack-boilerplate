@@ -2,16 +2,16 @@
 
 import { Paths } from './paths.config'
 import { Common } from './webpack.common'
-import merge from 'webpack-merge'
 
-import { Configuration as WebpackConfiguration } from 'webpack'
+import { Configuration } from 'webpack'
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server'
 
-interface Configuration extends WebpackConfiguration {
+interface DevConfiguration extends Configuration {
     devServer?: WebpackDevServerConfiguration
 }
 
-const dev: Configuration = {
+const dev: DevConfiguration = {
+  ...Common,
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
@@ -39,4 +39,4 @@ const dev: Configuration = {
   }
 }
 
-module.exports = merge(Common, dev)
+module.exports = dev

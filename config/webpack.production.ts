@@ -2,7 +2,6 @@
 
 import { Paths } from './paths.config'
 import { Common } from './webpack.common'
-import merge from 'webpack-merge'
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
@@ -10,6 +9,7 @@ import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
 import { Configuration } from 'webpack'
 
 const production: Configuration = {
+  ...Common,
   mode: 'production',
   devtool: false,
   output: {
@@ -47,4 +47,5 @@ const production: Configuration = {
     maxAssetSize: 512000
   }
 }
-module.exports = merge(Common, production)
+
+module.exports = production

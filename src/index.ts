@@ -1,3 +1,5 @@
+// Style
 import './sass/index.scss'
 
-console.log('Welcome to the Webpack boilerplate!')
+// Typescript
+import './ts/main'
