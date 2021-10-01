@@ -1,5 +1,3 @@
-// noinspection JSUnusedGlobalSymbols
-
 import { Paths } from './paths.config'
 import { Common } from './webpack.common'
 
