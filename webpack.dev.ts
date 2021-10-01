@@ -10,32 +10,32 @@ interface Configuration extends WebpackConfiguration {
 }
 
 const dev: Configuration = {
-    mode: 'development',
-    devtool: 'inline-source-map',
-    devServer: {
-        static: {
-            directory: paths.pub,
-        },
-        watchFiles: [`${paths.src}/**/*`, `${paths.pub}/**/*`],
-        historyApiFallback: true,
-        open: true,
-        compress: true,
-        hot: true,
-        port: 8080,
+  mode: 'development',
+  devtool: 'inline-source-map',
+  devServer: {
+    static: {
+      directory: paths.pub
     },
-    module: {
-        rules: [
-            {
-                test: /\.s?css$/i,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'sass-loader',
-                ],
-            },
-        ],
-    },
+    watchFiles: [`${paths.src}/**/*`, `${paths.pub}/**/*`],
+    historyApiFallback: true,
+    open: true,
+    compress: true,
+    hot: true,
+    port: 8080
+  },
+  module: {
+    rules: [
+      {
+        test: /\.s?css$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
+      }
+    ]
+  }
 }
 
 export default merge(common, dev)
