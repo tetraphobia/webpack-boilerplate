@@ -8,6 +8,6 @@ interface PathConfig {
 
 export const Paths: PathConfig = {
   src: path.resolve(__dirname, '../src'),
-  build: path.resolve(__dirname, '../dist'),
+  build: path.resolve(__dirname, '../build/compiled'),
   pub: path.resolve(__dirname, '../public')
 }

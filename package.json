@@ -45,6 +45,6 @@
     },
     "scripts": {
         "start": "NODE_ENV=development webpack serve --config ./config/webpack.dev.ts",
-        "build": "NODE_ENV=production webpack --progress --config ./config/webpack.production.ts"
+        "build": "NODE_ENV=production webpack --progress --config ./config/webpack.production.ts && tar -czvf ./build/build.tar.gz ./build/compiled"
     }
 }
