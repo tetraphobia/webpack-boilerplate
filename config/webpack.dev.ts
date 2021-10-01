@@ -3,13 +3,13 @@ import { Common } from './webpack.common'
 
 import { Configuration } from 'webpack'
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server'
+import merge from 'webpack-merge'
 
 interface DevConfiguration extends Configuration {
     devServer?: WebpackDevServerConfiguration
 }
 
 const dev: DevConfiguration = {
-  ...Common,
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
@@ -37,4 +37,4 @@ const dev: DevConfiguration = {
   }
 }
 
-module.exports = dev
+module.exports = merge(Common, dev)

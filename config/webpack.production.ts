@@ -3,6 +3,7 @@ import { Common } from './webpack.common'
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import merge from 'webpack-merge'
 
 import { Configuration } from 'webpack'
 
@@ -46,4 +47,4 @@ const production: Configuration = {
   }
 }
 
-module.exports = production
+module.exports = merge(Common, production)

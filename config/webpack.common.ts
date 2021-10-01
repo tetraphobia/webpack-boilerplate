@@ -7,7 +7,7 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { Configuration } from 'webpack'
 
 export const Common: Configuration = {
-  entry: [`${Paths.src}/index.ts`],
+  entry: `${Paths.src}/index.ts`,
   module: {
     rules: [
       {
