@@ -2,7 +2,6 @@ import { Paths } from './paths.config'
 
 import CopyPlugin from 'copy-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-// import PrettierPlugin from 'prettier-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 import { Configuration } from 'webpack'
@@ -47,6 +46,5 @@ export const Common: Configuration = {
         }
       ]
     })
-    // new PrettierPlugin(),
   ]
 }
