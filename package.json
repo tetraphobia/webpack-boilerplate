@@ -14,13 +14,13 @@
         "@types/mini-css-extract-plugin": "^2.3.0",
         "@types/node": "^16.10.2",
         "@types/webpack": "^5.28.0",
-        "@types/webpack-dev-server": "^4.1.0",
-        "@typescript-eslint/eslint-plugin": "^4.32.0",
-        "@typescript-eslint/parser": "^4.32.0",
+        "@types/webpack-dev-server": "4.3.0",
+        "@typescript-eslint/eslint-plugin": "4.33.0",
+        "@typescript-eslint/parser": "4.33.0",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^9.0.1",
         "css-loader": "^6.3.0",
-        "css-minimizer-webpack-plugin": "^3.0.2",
+        "css-minimizer-webpack-plugin": "3.1.0",
         "eslint": "^7.32.0",
         "eslint-config-standard": "^16.0.3",
         "eslint-plugin-import": "^2.24.2",
@@ -34,13 +34,13 @@
         "ts-loader": "^9.2.6",
         "ts-node": "^10.2.1",
         "typescript": "^4.4.3",
-        "webpack": "^5.55.1",
+        "webpack": "5.56.1",
         "webpack-cli": "^4.8.0",
-        "webpack-dev-server": "^4.3.0",
+        "webpack-dev-server": "4.3.1",
         "webpack-merge": "^5.8.0"
     },
     "scripts": {
         "start": "NODE_ENV=development webpack serve --config ./config/webpack.dev.ts",
-        "build": "NODE_ENV=production webpack --progress --config ./config/webpack.production.ts && tar -czvf ./build/build.tar.gz ./build/compiled"
+        "build": "NODE_ENV=production webpack --progress --config ./config/webpack.production.ts && cd ./build/compiled && tar -czvf ../build.tar.gz ."
     }
 }
