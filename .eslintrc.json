@@ -15,7 +15,7 @@
         "@typescript-eslint"
     ],
     "ignorePatterns": [
-        "./dist/**/*",
+        "./build/**/*",
         "./public/**/*",
         "./src/vendor/**/*.js",
         "./node_modules/**/*"
