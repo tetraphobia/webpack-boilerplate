@@ -3,6 +3,8 @@ import { Common } from './webpack.common'
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import ESLintPlugin from 'eslint-webpack-plugin'
+import StylelintWebpackPlugin from 'stylelint-webpack-plugin'
 import merge from 'webpack-merge'
 
 import { Configuration } from 'webpack'
@@ -29,6 +31,12 @@ const production: Configuration = {
     ]
   },
   plugins: [
+    new ESLintPlugin({
+      extensions: ['ts', 'js']
+    }),
+    new StylelintWebpackPlugin({
+      extensions: ['css', 'scss', 'sass']
+    }),
     new MiniCssExtractPlugin({
       filename: 'styles/[contenthash].css'
     })

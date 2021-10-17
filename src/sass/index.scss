@@ -1,14 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #e4ebef
+  background-color: #e4ebef;
 }
+
 .flex-container {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+
   img {
     width: 20em;
     height: 20em;
